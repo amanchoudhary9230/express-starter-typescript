@@ -3,7 +3,6 @@
   "version": "1.1.8",
   "author": "rjmacarthy",
   "scripts": {
-    "dev": "npm run build && concurrently --kill-others \"tsc src\" \"nodemon dist/index.js -e ts\"",
     "build": "tsc",
     "start": "node dist/index.js"
   },
