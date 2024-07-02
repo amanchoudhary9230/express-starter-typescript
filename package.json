@@ -5,17 +5,8 @@
   "private": false,
   "scripts": {
     "dev": "npm run build && concurrently --kill-others \"tsc -w -p src\" \"nodemon dist/index.js -e ts\"",
-    "debug": "npm run build && concurrently --kill-others \"tsc -w -p src\" \"nodemon --inspect dist/index.js -e ts\"",
-    "test:watch": "mocha -w ./spec/**/*.spec.ts --watch-extensions ts",
-    "test": "mocha --exit ./spec/**/*.spec.ts",
     "build": "tsc -p src",
-    "start": "node dist/index.js",
-    "build:docker": "docker build -t rjmacarthy/express-typescript-starter .",
-    "docker:compose": "docker-compose up",
-    "format": "prettier --write 'src/**/*ts'",
-    "lint": "tslint -c tslint.json 'src/**/*.ts'",
-    "lint:test": "tslint -c tslint.json 'spec/**/*.ts'",
-    "format:test": "prettier --write 'spec/**/*ts'"
+    "start": "node dist/index.js"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
